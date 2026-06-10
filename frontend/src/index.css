@@ -143,6 +143,32 @@ html:not(.dark) body.page-bg .sv-dashboard-layout {
   max-width: 100% !important;
 }
 
+/* ── Light Mode: Fix invisible white text across ALL pages ───────────────── */
+/* When NOT in dark mode, force headings to be dark (prevents white-on-white) */
+body:not(.dark-mode) h1:not(.premium-admin-theme *):not(.supervisor-theme *):not(.intel-dashboard-theme *):not(.login-page-container *):not(.register-page-container *):not(.ppm-modal *):not(.chatbot-container *),
+body:not(.dark-mode) h2:not(.premium-admin-theme *):not(.supervisor-theme *):not(.intel-dashboard-theme *):not(.login-page-container *):not(.register-page-container *):not(.ppm-modal *):not(.chatbot-container *),
+body:not(.dark-mode) h3:not(.premium-admin-theme *):not(.supervisor-theme *):not(.intel-dashboard-theme *):not(.login-page-container *):not(.register-page-container *):not(.ppm-modal *):not(.chatbot-container *),
+body:not(.dark-mode) h4:not(.premium-admin-theme *):not(.supervisor-theme *):not(.intel-dashboard-theme *):not(.login-page-container *):not(.register-page-container *):not(.ppm-modal *):not(.chatbot-container *),
+body:not(.dark-mode) h5:not(.premium-admin-theme *):not(.supervisor-theme *):not(.intel-dashboard-theme *):not(.login-page-container *):not(.register-page-container *):not(.ppm-modal *):not(.chatbot-container *),
+body:not(.dark-mode) h6:not(.premium-admin-theme *):not(.supervisor-theme *):not(.intel-dashboard-theme *):not(.login-page-container *):not(.register-page-container *):not(.ppm-modal *):not(.chatbot-container *) {
+  color: var(--text-primary);
+}
+
+/* Fix spans and list items with inline white/light colors in light mode */
+body:not(.dark-mode) .page-container li[style]:not(.premium-admin-theme *):not(.supervisor-theme *):not(.intel-dashboard-theme *):not(.ppm-modal *),
+body:not(.dark-mode) .page-container span[style]:not(.premium-admin-theme *):not(.supervisor-theme *):not(.intel-dashboard-theme *):not(.ppm-modal *) {
+  color: var(--text-primary) !important;
+}
+
+/* Smooth transition when switching between light and dark */
+body, body * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+/* Exception: animations and transforms should not be slowed by transition */
+body *[class*="animate-"], body *[style*="animation"] {
+  transition: none !important;
+}
+
 a {
   font-weight: 500;
   color: var(--brand-color);

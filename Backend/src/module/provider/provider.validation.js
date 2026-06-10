@@ -28,7 +28,7 @@ export const idSchema = Joi.object({
 
 export const providerQuerySchema = Joi.object({
   page: Joi.number().integer().min(1).optional(),
-  limit: Joi.number().integer().min(1).max(100).optional(),
+  limit: Joi.number().integer().min(1).max(500).optional(),
   search: Joi.string().optional(),
   type: Joi.string().valid("Guide", "Transport", "Equipment", "TourOperator").optional(),
   isVerified: Joi.boolean().optional()

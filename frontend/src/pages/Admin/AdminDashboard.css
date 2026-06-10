@@ -1463,18 +1463,262 @@ html:not(.dark) .trend.warning {
   }
 }
 
-/* Light mode button hover overrides to color #8349FF */
-html:not(.dark) .premium-admin-theme .btn-primary:hover,
-html:not(.dark) .premium-admin-theme .btn-primary-form:hover:not(:disabled) {
-  background-color: #8349FF !important;
-  color: #ffffff !important;
-  border-color: #8349FF !important;
-  box-shadow: 0 0 15px rgba(131, 73, 255, 0.4) !important;
+/* ========================================== */
+/* ☀️ LIGHT MODE OVERRIDES FOR ADMIN DASHBOARD */
+/* ========================================== */
+body:not(.dark-mode) .premium-admin-theme {
+  --bg-darker: #f8fafc;
+  --bg-dark: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
+  --glow-purple: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --glow-indigo: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --glow-teal: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-html:not(.dark) .premium-admin-theme .btn-secondary:hover,
-html:not(.dark) .premium-admin-theme .btn-secondary-xs:hover {
-  background-color: rgba(131, 73, 255, 0.08) !important;
-  color: #8349FF !important;
-  border-color: #8349FF !important;
+body:not(.dark-mode) .premium-admin-theme .aura-brand span {
+  background: linear-gradient(to right, #0f172a, var(--color-primary));
+  -webkit-background-clip: text;
 }
+
+body:not(.dark-mode) .premium-admin-theme .admin-details h4,
+body:not(.dark-mode) .premium-admin-theme .pane-header h2,
+body:not(.dark-mode) .premium-admin-theme .metric-value h3,
+body:not(.dark-mode) .premium-admin-theme .insight-card h4,
+body:not(.dark-mode) .premium-admin-theme .pkg-emphasis,
+body:not(.dark-mode) .premium-admin-theme .add-experience-card h3,
+body:not(.dark-mode) .premium-admin-theme .packages-inventory-view h3,
+body:not(.dark-mode) .premium-admin-theme .card-body-details h4,
+body:not(.dark-mode) .premium-admin-theme .customer-name,
+body:not(.dark-mode) .premium-admin-theme .subbar-pill strong {
+  color: #0f172a !important;
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-menu li:hover,
+body:not(.dark-mode) .premium-admin-theme .aura-menu li.active {
+  color: var(--color-accent) !important;
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .premium-admin-theme .topbar-search input {
+  color: #0f172a;
+}
+
+body:not(.dark-mode) .premium-admin-theme .control-btn:hover {
+  color: var(--color-primary);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .premium-admin-theme .action-btn-widget:hover span {
+  color: var(--color-accent);
+}
+
+body:not(.dark-mode) .premium-admin-theme .status-tab-btn:hover {
+  color: #0f172a;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .premium-admin-theme .status-tab-btn.active {
+  color: #ffffff !important;
+  background-color: var(--color-primary);
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-table tr:hover td {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+body:not(.dark-mode) .premium-admin-theme .input-with-icon input,
+body:not(.dark-mode) .premium-admin-theme .input-with-icon select,
+body:not(.dark-mode) .premium-admin-theme .form-field textarea {
+  color: #0f172a !important;
+  background-color: #f1f5f9 !important;
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-spinner {
+  border: 3px solid rgba(0,0,0,0.05);
+  border-top-color: var(--color-primary);
+  border-bottom-color: var(--color-accent);
+}
+
+>>>>>>> 8144d04 (latest updates)
+=======
+/* ========================================== */
+/* ☀️ LIGHT MODE OVERRIDES FOR ADMIN DASHBOARD */
+/* ========================================== */
+body:not(.dark-mode) .premium-admin-theme {
+  --bg-darker: #f8fafc;
+  --bg-dark: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
+  --glow-purple: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --glow-indigo: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --glow-teal: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-brand span {
+  background: linear-gradient(to right, #0f172a, var(--color-primary));
+  -webkit-background-clip: text;
+}
+
+body:not(.dark-mode) .premium-admin-theme .admin-details h4,
+body:not(.dark-mode) .premium-admin-theme .pane-header h2,
+body:not(.dark-mode) .premium-admin-theme .metric-value h3,
+body:not(.dark-mode) .premium-admin-theme .insight-card h4,
+body:not(.dark-mode) .premium-admin-theme .pkg-emphasis,
+body:not(.dark-mode) .premium-admin-theme .add-experience-card h3,
+body:not(.dark-mode) .premium-admin-theme .packages-inventory-view h3,
+body:not(.dark-mode) .premium-admin-theme .card-body-details h4,
+body:not(.dark-mode) .premium-admin-theme .customer-name,
+body:not(.dark-mode) .premium-admin-theme .subbar-pill strong {
+  color: #0f172a !important;
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-menu li:hover,
+body:not(.dark-mode) .premium-admin-theme .aura-menu li.active {
+  color: var(--color-accent) !important;
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .premium-admin-theme .topbar-search input {
+  color: #0f172a;
+}
+
+body:not(.dark-mode) .premium-admin-theme .control-btn:hover {
+  color: var(--color-primary);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .premium-admin-theme .action-btn-widget:hover span {
+  color: var(--color-accent);
+}
+
+body:not(.dark-mode) .premium-admin-theme .status-tab-btn:hover {
+  color: #0f172a;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .premium-admin-theme .status-tab-btn.active {
+  color: #ffffff !important;
+  background-color: var(--color-primary);
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-table tr:hover td {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+body:not(.dark-mode) .premium-admin-theme .input-with-icon input,
+body:not(.dark-mode) .premium-admin-theme .input-with-icon select,
+body:not(.dark-mode) .premium-admin-theme .form-field textarea {
+  color: #0f172a !important;
+  background-color: #f1f5f9 !important;
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-spinner {
+  border: 3px solid rgba(0,0,0,0.05);
+  border-top-color: var(--color-primary);
+  border-bottom-color: var(--color-accent);
+}
+
+=======
+/* ========================================== */
+/* ☀️ LIGHT MODE OVERRIDES FOR ADMIN DASHBOARD */
+/* ========================================== */
+body:not(.dark-mode) .premium-admin-theme {
+  --bg-darker: #f8fafc;
+  --bg-dark: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
+  --glow-purple: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --glow-indigo: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --glow-teal: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-brand span {
+  background: linear-gradient(to right, #0f172a, var(--color-primary));
+  -webkit-background-clip: text;
+}
+
+body:not(.dark-mode) .premium-admin-theme .admin-details h4,
+body:not(.dark-mode) .premium-admin-theme .pane-header h2,
+body:not(.dark-mode) .premium-admin-theme .metric-value h3,
+body:not(.dark-mode) .premium-admin-theme .insight-card h4,
+body:not(.dark-mode) .premium-admin-theme .pkg-emphasis,
+body:not(.dark-mode) .premium-admin-theme .add-experience-card h3,
+body:not(.dark-mode) .premium-admin-theme .packages-inventory-view h3,
+body:not(.dark-mode) .premium-admin-theme .card-body-details h4,
+body:not(.dark-mode) .premium-admin-theme .customer-name,
+body:not(.dark-mode) .premium-admin-theme .subbar-pill strong {
+  color: #0f172a !important;
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-menu li:hover,
+body:not(.dark-mode) .premium-admin-theme .aura-menu li.active {
+  color: var(--color-accent) !important;
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .premium-admin-theme .topbar-search input {
+  color: #0f172a;
+}
+
+body:not(.dark-mode) .premium-admin-theme .control-btn:hover {
+  color: var(--color-primary);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .premium-admin-theme .action-btn-widget:hover span {
+  color: var(--color-accent);
+}
+
+body:not(.dark-mode) .premium-admin-theme .status-tab-btn:hover {
+  color: #0f172a;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .premium-admin-theme .status-tab-btn.active {
+  color: #ffffff !important;
+  background-color: var(--color-primary);
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-table tr:hover td {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+body:not(.dark-mode) .premium-admin-theme .input-with-icon input,
+body:not(.dark-mode) .premium-admin-theme .input-with-icon select,
+body:not(.dark-mode) .premium-admin-theme .form-field textarea {
+  color: #0f172a !important;
+  background-color: #f1f5f9 !important;
+}
+
+body:not(.dark-mode) .premium-admin-theme .aura-spinner {
+  border: 3px solid rgba(0,0,0,0.05);
+  border-top-color: var(--color-primary);
+  border-bottom-color: var(--color-accent);
+}
+
+>>>>>>> 8144d04 (latest updates)

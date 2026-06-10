@@ -298,3 +298,72 @@
     border-radius: 8px;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   🌞 LIGHT MODE OVERRIDES — Home page
+   كل حاجة جوه body:not(.dark-mode) بس
+   ══════════════════════════════════════════════════════════════ */
+body:not(.dark-mode) .home-container {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+body:not(.dark-mode) .hero-title {
+  color: #0f172a;
+}
+
+body:not(.dark-mode) .hero-title span {
+  color: #d4af37;
+}
+
+body:not(.dark-mode) .hero-subtitle {
+  color: #334155;
+}
+
+body:not(.dark-mode) .hero-description {
+  color: #475569;
+}
+
+body:not(.dark-mode) .featured-experiences-section {
+  background-color: #f1f5f9;
+}
+
+body:not(.dark-mode) .section-header h2 {
+  color: #0f172a;
+}
+
+body:not(.dark-mode) .section-header p {
+  color: #64748b;
+}
+
+body:not(.dark-mode) .experience-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+body:not(.dark-mode) .experience-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+body:not(.dark-mode) .card-title {
+  color: #0f172a;
+}
+
+body:not(.dark-mode) .card-price {
+  border-top: 1px solid #e2e8f0;
+}
+
+body:not(.dark-mode) .price-label {
+  color: #64748b;
+}
+
+body:not(.dark-mode) .search-bar-form {
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark-mode) .search-divider {
+  background-color: #cbd5e1;
+}
+

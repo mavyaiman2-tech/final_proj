@@ -1208,6 +1208,60 @@ const AdminIntelligence = () => {
             grid-column: span 1;
           }
         }
+
+        /* ============================================== */
+        /* ☀️ LIGHT MODE OVERRIDES FOR AI FORECASTING PAGE */
+        /* ============================================== */
+        body:not(.dark-mode) .intel-dashboard-theme {
+          background-color: #f8fafc;
+          color: #0f172a;
+        }
+        body:not(.dark-mode) .intel-header {
+          border-bottom-color: #e2e8f0;
+        }
+        body:not(.dark-mode) .intel-title-texts h2,
+        body:not(.dark-mode) .intel-header-left h3,
+        body:not(.dark-mode) .intel-card-header-left h3,
+        body:not(.dark-mode) .intel-card-header-texts h3,
+        body:not(.dark-mode) .intel-action-item h4,
+        body:not(.dark-mode) .intel-threat-name,
+        body:not(.dark-mode) .intel-provider-meta h4,
+        body:not(.dark-mode) .intel-gauge-text {
+          color: #0f172a !important;
+        }
+        body:not(.dark-mode) .intel-description {
+          color: #475569;
+        }
+        body:not(.dark-mode) .intel-card {
+          background-color: #ffffff;
+          border-color: #e2e8f0;
+        }
+        body:not(.dark-mode) .intel-chart-card {
+          background: #ffffff !important;
+          border-color: rgba(213, 178, 102, 0.4) !important;
+        }
+        body:not(.dark-mode) .intel-action-item,
+        body:not(.dark-mode) .intel-threat-item,
+        body:not(.dark-mode) .intel-provider-row {
+          background-color: #f1f5f9;
+          border-color: #e2e8f0;
+        }
+        body:not(.dark-mode) .intel-svg-chart line {
+          stroke: #cbd5e1;
+        }
+        body:not(.dark-mode) .intel-axis-text {
+          fill: #475569;
+        }
+        body:not(.dark-mode) .intel-card-subtitle {
+          color: #64748b;
+        }
+        body:not(.dark-mode) .intel-item-desc,
+        body:not(.dark-mode) .intel-threat-desc {
+          color: #334155;
+        }
+        body:not(.dark-mode) .intel-gauge-bg {
+          stroke: #cbd5e1;
+        }
       `}</style>
     </div>
   );

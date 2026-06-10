@@ -855,3 +855,44 @@ body.dark-mode .unauth-graphic {
 body.dark-mode .chatbot-package-card {
   background: rgba(20, 20, 20, 0.85);
 }
+
+/* Theme overrides for chatbot components */
+body.dark-mode .message-bubble-wrapper.bot .message-bubble {
+  background: #2a2a35 !important;
+  color: #f1f5f9 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-mode .message-bubble-wrapper.bot .message-bubble .message-content {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .message-bubble-wrapper.bot .message-bubble .message-time {
+  color: rgba(241, 245, 249, 0.6) !important;
+}
+
+/* Light mode overrides for chatbot recommendations */
+body:not(.dark-mode) .chatbot-package-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 61, 89, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body:not(.dark-mode) .chatbot-package-title {
+  color: #0f172a !important;
+}
+
+body:not(.dark-mode) .chatbot-package-duration {
+  color: #475569 !important;
+}
+
+body:not(.dark-mode) .btn-chatbot-pkg-view {
+  background: rgba(0, 0, 0, 0.05);
+  color: #0f172a;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark-mode) .btn-chatbot-pkg-view:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+

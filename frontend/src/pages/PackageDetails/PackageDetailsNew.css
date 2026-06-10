@@ -1233,25 +1233,26 @@ body:not(.dark-mode) .packing-card h3 {
 /* 🌙 DYNAMIC THEME & RTL SUPPORT (MODERN OVERRIDES)              */
 /* ============================================================== */
 
-/* Root Variables (Light Mode) */
-:root {
-  --primary-color: #0f172a;
-  --secondary-color: #f59e0b;
-  --accent-color: #f59e0b;
+/* Root Variables — scoped to .package-details-page only, NOT global */
+body:not(.dark-mode) .package-details-page {
+  --primary-color: #003D59;
+  --secondary-color: #d4af37;
+  --accent-color: #e61e4d;
   --bg-main: #f8fafc;
-  --card-bg: rgba(255, 255, 255, 0.9);
-  --text-dark: #0f172a;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
   --text-muted: #64748b;
   --border-light: #e2e8f0;
-  --success-color: #10b981;
-  --error-color: #ef4444;
+  --success-color: #2e7d32;
+  --error-color: #c62828;
   --box-shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-border: #e2e8f0;
 }
 
-/* Dark Mode Overrides */
-.dark, body.dark-mode {
-  --primary-color: #0f172a;
+/* Dark Mode Overrides — scoped */
+body.dark-mode .package-details-page,
+html.dark .package-details-page {
+  --primary-color: #ffffff;
   --secondary-color: #f59e0b;
   --accent-color: #f59e0b;
   --bg-main: #0a0b0d;
@@ -1368,28 +1369,39 @@ body:not(.dark-mode) .packing-card h3 {
   font-family: 'Outfit', 'Inter', sans-serif !important;
 }
 
-/* Premium Dark Mode Styles (Forces gorgeous luxury dark look as in the reference image) */
-.package-details-page {
+/* Premium Dark Mode Styles — scoped to dark mode ONLY */
+html.dark .package-details-page,
+body.dark-mode .package-details-page {
   background-color: #060709 !important;
   color: #f8fafc !important;
 }
-.package-main-info, .booking-card, .write-review-card, .review-card, .stats-panel-grid, .packing-guide-section, .packing-card, .day-content {
+html.dark .package-main-info, html.dark .booking-card, html.dark .write-review-card,
+html.dark .review-card, html.dark .stats-panel-grid, html.dark .packing-guide-section,
+html.dark .packing-card, html.dark .day-content,
+body.dark-mode .package-main-info, body.dark-mode .booking-card, body.dark-mode .write-review-card,
+body.dark-mode .review-card, body.dark-mode .stats-panel-grid, body.dark-mode .packing-guide-section,
+body.dark-mode .packing-card, body.dark-mode .day-content {
   background: #111317 !important;
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5) !important;
   color: #f8fafc !important;
 }
-.package-main-info h1, .package-main-info h2, .package-main-info h3, .reviews-header h2, .reviewer-name, .packing-header h2 {
+html.dark .package-main-info h1, html.dark .package-main-info h2, html.dark .package-main-info h3,
+html.dark .reviews-header h2, html.dark .reviewer-name, html.dark .packing-header h2,
+body.dark-mode .package-main-info h1, body.dark-mode .package-main-info h2, body.dark-mode .package-main-info h3,
+body.dark-mode .reviews-header h2, body.dark-mode .reviewer-name, body.dark-mode .packing-header h2 {
   color: #ffffff !important;
 }
-.description-text, .review-card-body p, .benefit-item p, .packing-header p {
+html.dark .description-text, html.dark .review-card-body p, html.dark .benefit-item p, html.dark .packing-header p,
+body.dark-mode .description-text, body.dark-mode .review-card-body p, body.dark-mode .benefit-item p, body.dark-mode .packing-header p {
   color: #cbd5e1 !important;
 }
+/* Buttons stay consistent in both modes */
 .btn-book-now, .btn-submit-review, .btn-add-activity, .btn-toggle-custom {
   background: #f59e0b !important;
-  color: #000000 !important; /* Black text on gold! */
+  color: #000000 !important;
   box-shadow: 0 8px 25px rgba(245, 158, 11, 0.25) !important;
-  border-radius: 16px !important; /* Premium 16px border radius */
+  border-radius: 16px !important;
   font-weight: 800 !important;
 }
 .btn-book-now:hover, .btn-submit-review:hover, .btn-add-activity:hover, .btn-toggle-custom:hover {

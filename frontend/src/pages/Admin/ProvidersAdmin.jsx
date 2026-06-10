@@ -15,7 +15,7 @@ const ProvidersAdmin = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const res = await getProviders({ limit: 200 });
+      const res = await getProviders({ limit: 100 });
       const list = res.data || res.providers || res || [];
       setProviders(Array.isArray(list) ? list : []);
     } catch (err) { console.error(err); }

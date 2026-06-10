@@ -1378,3 +1378,84 @@ html:not(.dark) .supervisor-theme {
     padding: 16px;
   }
 }
+
+/* ============================================== */
+/* ☀️ LIGHT MODE OVERRIDES FOR SUPERVISOR DASHBOARD */
+/* ============================================== */
+body:not(.dark-mode) .supervisor-theme {
+  --sv-bg-darker: #f8fafc;
+  --sv-bg-dark: #f1f5f9;
+  --sv-bg-card: #ffffff;
+  --sv-bg-card-hover: #f1f5f9;
+  --sv-text: #0f172a;
+  --sv-text-muted: #475569;
+  --sv-text-dim: #64748b;
+  --sv-border: rgba(0, 0, 0, 0.08);
+  --sv-border-hover: rgba(0, 0, 0, 0.15);
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-brand-text {
+  background: linear-gradient(to right, #0f172a, var(--sv-accent));
+  -webkit-background-clip: text;
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-profile-info h4,
+body:not(.dark-mode) .supervisor-theme .sv-topbar-left h2,
+body:not(.dark-mode) .supervisor-theme .sv-welcome-text h1,
+body:not(.dark-mode) .supervisor-theme .sv-metric-value,
+body:not(.dark-mode) .supervisor-theme .sv-card-header h3,
+body:not(.dark-mode) .supervisor-theme .sv-trip-name,
+body:not(.dark-mode) .supervisor-theme .sv-booking-title,
+body:not(.dark-mode) .supervisor-theme .sv-section-title,
+body:not(.dark-mode) .supervisor-theme .sv-detail-group h5,
+body:not(.dark-mode) .supervisor-theme .sv-tab-btn,
+body:not(.dark-mode) .supervisor-theme .sv-detail-value {
+  color: #0f172a !important;
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-menu li:hover,
+body:not(.dark-mode) .supervisor-theme .sv-menu li.active {
+  color: var(--sv-accent) !important;
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-search-box input {
+  color: #0f172a;
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-topbar-btn:hover {
+  color: var(--sv-accent);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-tab-btn.active {
+  color: #ffffff !important;
+  background: var(--sv-accent-gradient);
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-table tr:hover td {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-welcome-banner {
+  background: linear-gradient(135deg, #e0f2fe 0%, #ccfbf1 50%, #e0f2fe 100%);
+  border-color: rgba(20, 184, 166, 0.2);
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-welcome-text p {
+  color: #334155;
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-stat-item {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+body:not(.dark-mode) .supervisor-theme .sv-spinner {
+  border: 3px solid rgba(0,0,0,0.05);
+  border-top-color: var(--sv-accent);
+  border-bottom-color: var(--sv-accent-secondary);
+}
+

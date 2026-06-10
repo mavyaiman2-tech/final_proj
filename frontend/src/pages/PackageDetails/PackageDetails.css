@@ -1134,8 +1134,9 @@ body:not(.dark-mode) .packing-card h3 {
 /* 🌙 DYNAMIC THEME & RTL SUPPORT (MODERN OVERRIDES)              */
 /* ============================================================== */
 
-/* Root Variables (Forced Dark Luxury Mode) */
-:root {
+/* Dark Mode — luxury gold theme scoped to .package-details-page only */
+body.dark-mode .package-details-page,
+html.dark .package-details-page {
   --primary-color: #e5c158;
   --secondary-color: #d5b266;
   --accent-color: #d4af37;
@@ -1150,55 +1151,87 @@ body:not(.dark-mode) .packing-card h3 {
   --glass-border: rgba(229, 193, 88, 0.1);
 }
 
-/* Light Mode Variables Override */
-html:not(.dark), body:not(.dark-mode),
-html:not(.dark) .package-details-page, body:not(.dark-mode) .package-details-page {
-  --primary-color: #003d59;
-  --secondary-color: #001f2f;
-  --accent-color: #d4af37;
-  --bg-main: #ffffff;
-  --card-bg: #f8fafc;
-  --text-dark: #0f172a;
-  --text-muted: #475569;
+/* Light Mode — clean readable theme for .package-details-page */
+body:not(.dark-mode) .package-details-page {
+  --primary-color: #003D59;
+  --secondary-color: #d4af37;
+  --accent-color: #e61e4d;
+  --bg-main: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
   --border-light: #e2e8f0;
-  --success-color: #10b981;
-  --error-color: #ef4444;
-  --box-shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
-  --glass-border: rgba(0, 0, 0, 0.08);
+  --success-color: #2e7d32;
+  --error-color: #c62828;
+  --box-shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+  --glass-border: #e2e8f0;
+>>>>>>> 8144d04 (latest updates)
+
+=======
+/* Light Mode — clean readable theme for .package-details-page */
+body:not(.dark-mode) .package-details-page {
+  --primary-color: #003D59;
+  --secondary-color: #d4af37;
+  --accent-color: #e61e4d;
+  --bg-main: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --border-light: #e2e8f0;
+  --success-color: #2e7d32;
+  --error-color: #c62828;
+  --box-shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+  --glass-border: #e2e8f0;
+
+=======
+/* Light Mode — clean readable theme for .package-details-page */
+body:not(.dark-mode) .package-details-page {
+  --primary-color: #003D59;
+  --secondary-color: #d4af37;
+  --accent-color: #e61e4d;
+  --bg-main: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --border-light: #e2e8f0;
+  --success-color: #2e7d32;
+  --error-color: #c62828;
+  --box-shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+  --glass-border: #e2e8f0;
+>>>>>>> 8144d04 (latest updates)
 }
 
-/* Dark Mode Overrides (Same as above) */
-.dark, body.dark-mode,
-.dark .package-details-page, body.dark-mode .package-details-page {
-  --primary-color: #e5c158;
-  --secondary-color: #d5b266;
-  --accent-color: #d4af37;
-  --bg-main: #09090b;
-  --card-bg: rgba(20, 20, 26, 0.85);
-  --text-dark: #ffffff;
-  --text-muted: #94a3b8;
-  --border-light: rgba(229, 193, 88, 0.15);
-  --success-color: #34d399;
-  --error-color: #fb7185;
-  --box-shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
-  --glass-border: rgba(229, 193, 88, 0.1);
-}
-
-/* Apply variables aggressively */
-.package-details-page {
+/* Apply variables in dark mode only */
+body.dark-mode .package-details-page,
+html.dark .package-details-page {
   background-color: var(--bg-main) !important;
   color: var(--text-dark) !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.package-main-info, 
-.booking-card, 
-.write-review-card, 
-.review-card, 
-.stats-panel-grid, 
-.day-content,
-.packing-card,
-.packing-guide-section {
+/* Apply variables in light mode */
+body:not(.dark-mode) .package-details-page {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .package-main-info,
+body.dark-mode .booking-card,
+body.dark-mode .write-review-card,
+body.dark-mode .review-card,
+body.dark-mode .stats-panel-grid,
+body.dark-mode .day-content,
+body.dark-mode .packing-card,
+body.dark-mode .packing-guide-section,
+html.dark .package-main-info,
+html.dark .booking-card,
+html.dark .write-review-card,
+html.dark .review-card,
+html.dark .stats-panel-grid,
+html.dark .day-content,
+html.dark .packing-card,
+html.dark .packing-guide-section {
   background: var(--card-bg) !important;
   border: 1px solid var(--glass-border) !important;
   box-shadow: var(--box-shadow-soft) !important;
@@ -1206,20 +1239,59 @@ html:not(.dark) .package-details-page, body:not(.dark-mode) .package-details-pag
   color: var(--text-dark) !important;
 }
 
-.package-main-info h1, 
-.package-main-info h2, 
-.package-main-info h3,
-.reviews-header h2,
-.write-review-card h3,
-.reviewer-name {
+body:not(.dark-mode) .package-main-info,
+body:not(.dark-mode) .write-review-card,
+body:not(.dark-mode) .review-card,
+body:not(.dark-mode) .stats-panel-grid,
+body:not(.dark-mode) .day-content {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #1e293b !important;
+}
+
+body:not(.dark-mode) .booking-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06) !important;
+}
+
+body.dark-mode .package-main-info h1,
+body.dark-mode .package-main-info h2,
+body.dark-mode .package-main-info h3,
+body.dark-mode .reviews-header h2,
+body.dark-mode .write-review-card h3,
+body.dark-mode .reviewer-name,
+html.dark .package-main-info h1,
+html.dark .package-main-info h2,
+html.dark .package-main-info h3,
+html.dark .reviews-header h2,
+html.dark .write-review-card h3,
+html.dark .reviewer-name {
   color: var(--primary-color) !important;
 }
 
-.description-text, 
-.review-card-body p, 
-.benefit-item p,
-.login-prompt-card p {
+body:not(.dark-mode) .package-main-info h1,
+body:not(.dark-mode) .package-main-info h2,
+body:not(.dark-mode) .package-main-info h3,
+body:not(.dark-mode) .reviews-header h2,
+body:not(.dark-mode) .write-review-card h3,
+body:not(.dark-mode) .reviewer-name {
+  color: #003D59 !important;
+}
+
+body.dark-mode .description-text,
+body.dark-mode .review-card-body p,
+body.dark-mode .benefit-item p,
+body.dark-mode .login-prompt-card p,
+html.dark .description-text,
+html.dark .review-card-body p {
   color: var(--text-muted) !important;
+}
+
+body:not(.dark-mode) .description-text,
+body:not(.dark-mode) .review-card-body p,
+body:not(.dark-mode) .benefit-item p {
+  color: #475569 !important;
 }
 
 .review-form textarea {
